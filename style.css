@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts/StationStandard.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Only h1 uses your custom font */
+h1 {
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+/* Everything else uses a different font */
+body {
+  background: #111;
+  color: #eee;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;          /* enables flexbox */
+  flex-direction: row;    /* side by side */
+  gap: 20px;              /* space between boxes */
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column; /* stack */
+  }
+}
+
+.box {
+  flex: 1;                /* make boxes grow equally */
+  padding: 20px;
+  background: #444;
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+}
+
+details > summary {
+  cursor: pointer;
+  font-weight: bold;
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none; /* Hide default arrow on some browsers */
+}
+
+details[open] > summary::before {
+  content: "▼ "; /* Custom arrow when open */
+}
+
+details > summary::before {
+  content: "▶ "; /* Custom arrow when closed */
+}
+.box img {
+  width: 100%;      /* make image fill the container’s width */
+  height: auto;     /* keep the image’s aspect ratio */
+  display: block;   /* remove tiny bottom whitespace under images */
+}
+
+#intro {
+  display: flex;
+  align-items: center;      /* vertically center text and image */
+  justify-content: space-between; /* optional: space between */
+  gap: 20px;                /* space between text and image */
+  flex-wrap: wrap;          /* allow wrapping on small screens */
+}
+
+#intro-text {
+  flex: 1 1 300px;          /* grow and shrink, min width 300px */
+}
+
+#intro-image {
+  flex: 0 0 auto;         /* don’t force width */
+  max-width: 600px;       /* max width limit */
+  width: 100%;            /* let it shrink responsively */
+  height: auto;           /* keep aspect ratio */
+}
+
+
+/* Responsive: stack vertically on narrow screens */
+@media (max-width: 600px) {
+  #intro {
+    flex-direction: column;
+    align-items: flex-start; /* left align text and image */
+  }
+
+  #intro-image {
+    width: 100%;             /* image full width on small screens */
+    flex: none;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My First Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="intro">
+  <div id="intro-text">
+    <h1>jeffra</h1>
+    <p>he/they
+      <br>i made this website (and im hosting it too)</p>
+    <div id="time-display">time for me rn: --:--</div>
+  </div>
+  <img src="images/me.png" alt="Intro image" id="intro-image" />
+</div>
+
+  <!-- Time display div OUTSIDE of <p> -->
+
+<br>
+  <div class="container">
+    <div class="box">
+      <h2>my pc</h2>
+      <p>
+        ryzen 7 7700x<br />
+        gigabyte b650m aorus elite ax<br />
+        2x2x16 corsair vengeance ddr5 6000 cl30 ($1500 worth in just ram lmfao)<br />
+        thermalright peerless assassin 140 black<br />
+        2x silverstone fhs 120x 4000rpm server fans<br />
+        rx 6900 xt (gigabyte gaming)<br />
+        xpg core reactor ii 850w psu<br />
+        deepcool ch160 plus (goated case)
+      </p>
+      <p>im waiting on some case fans rn ill upload a photo when they arrive</p>
+    </div>
+
+    <div class="box">
+      <h2>games i play</h2>
+
+      <details>
+        <summary>phighting (this is a dropdown)</summary>
+        <p>bio main (im sure youre aware already)
+        <br><a href="https://docs.google.com/spreadsheets/d/1X5h1WUIxs9WB2ri--fntnamlnidkmLB7jIZPXPv5bSg">i have a spreadsheet</a>
+    <br><a href="https://docs.google.com/document/d/1sH9JynB7eOHPlCIlk-kFqlDOgCkBfZkIhGXo7MHC5nc">biograft guide</a></p>
+      </details>
+<details>
+  <summary>geometry dash</summary>
+  hardest: <a href="https://youtu.be/d6JqyqYrdUE">white women</a>
+  <br> beating nine circles rn
+<br>
+</details>
+<br>beamng.drive
+<br><h2>other interests</h2>
+        <p>furry porn
+          <br>facebook marketplace
+          <br>tinkering wtih pcs (this website is hosted on a tinkered pc)
+        </p>
+
+      <p>Item 3</p>
+    </div>
+  </div>
+
+  <!-- Put the script here so the DOM elements exist -->
+  <script>
+    function updateLocalTime() {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, "0");
+      const minutes = now.getMinutes().toString().padStart(2, "0");
+      document.getElementById("time-display").textContent = `time for me rn: ${hours}:${minutes} (AEST)`;
+    }
+
+    updateLocalTime();
+    setInterval(updateLocalTime, 60 * 1000);
+  </script>
+</body>
+</html>
