@@ -6,15 +6,32 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'kozuka';
+  src: url('fonts/KozGoPr6NRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: fonstars;
+  src: url(fonts/passagewaybd.otf);
+  font-weight: normal;
+  font-style: normal;
+}
 
 h1 {
   font-family: 'MyCustomFont', sans-serif;
 }
-
+h2 {
+  font-family: 'fonstars', sans-serif;
+}
+p {
+  font-family: 'kozuka', sans-serif;
+}
 body {
   background: #111;
   color: #eee;
-  font-family: Arial, sans-serif;
+  font-family: 'kozuka', sans-serif;
 }
 
 .container {
@@ -91,6 +108,7 @@ details > summary::before {
   max-width: 600px;       /* max width limit */
   width: 100%;            /* let it shrink responsively */
   height: auto;           /* keep aspect ratio */
+  border-radius: 25px;
 }
 
 #box-image {
@@ -119,4 +137,23 @@ body {
   background-attachment: fixed;
   background-size: cover;
  background-position: center;
+}
+
+a:link {
+  color: lightseagreen;
+}
+
+/* visited link */
+a:visited {
+  color: hotpink;
+}
+
+/* mouse over link */
+a:hover {
+  color: whitesmoke;
+}
+
+/* selected link */
+a:active {
+  color: black;
 }
