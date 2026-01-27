@@ -41,7 +41,7 @@ justify-content: center;
   gap: 20px;              
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .container {
     flex-direction: column;
   }
@@ -65,7 +65,7 @@ justify-content: center;
   backdrop-filter: blur(10px);
   border-radius: 6px;
   text-align: center;
-  max-width: 600px
+  max-width: 1600px
 }
 
 details > summary {
@@ -119,7 +119,7 @@ details > summary::before {
 }
 
 /* Responsive: stack vertically on narrow screens */
-@media (max-width: 600px) {
+@media (max-width: 1600px) {
    {
     flex-direction: column;
     align-items: center; /* left align text and image */
@@ -130,6 +130,13 @@ details > summary::before {
     flex: none;
     margin-top: 10px;
   }
+ #pc-photo {
+    width: 10%;             /* image full width on small screens */
+    flex: none;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 100px;
+  }
 }
 body {
   background-image: url('images/f40.jpg');
@@ -138,6 +145,7 @@ body {
   background-size: cover;
  background-position: center;
 }
+
 
 a:link {
   color: lightseagreen;
